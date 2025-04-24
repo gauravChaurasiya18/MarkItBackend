@@ -48,6 +48,11 @@ mongoose.connect(process.env.DB_CONNECTION_STRING, {
   console.error("Error connecting to MongoDB:", err.message);
 });
 
+app.get("/", (req, res) => {
+  res.send("API is running");
+});
+
+
 // Export app for Vercel
 export default app;
 
